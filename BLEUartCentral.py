@@ -144,10 +144,11 @@ class BLECentral:
 
         # event: disconnection
         elif event == _IRQ_advertising_payload_DISCONNECT:
-            print("Disconnected from %s" %_TARGET_PERIPHERAL_NAME)
-            conn_handle, _, _ = data
+            conn_handle, addr_type, addr = data
             if conn_handle == self._conn_handle:
                 self._reset()
+            print("Disconnected from Peripheral with MAC addr {}...".format(hexlify(addr)))   
+
 
         # event: service notified from Peripheral to Central
         elif event == _IRQ_GATTC_SERVICE_RESULT:
@@ -188,7 +189,6 @@ class BLECentral:
         # event: device notification response
         elif event == _IRQ_GATTC_NOTIFY:
             conn_handle, value_handle, notify_data = data
-            print("notified something")
             if conn_handle == self._conn_handle and value_handle == self._tx_handle:
                 if self._notify_callback:
                     self._notify_callback(notify_data)
@@ -218,7 +218,10 @@ class BLECentral:
         self._addr_type = None
         self._addr = None
         self._scan_callback = callback
-        self._ble.gap_scan(2000, 30000, 30000, True)
+        try:
+            self._ble.gap_scan(2000, 30000, 30000, True)
+        except OSError:
+            pass
 
     def connect(self, addr_type=None, addr=None, callback=None):
         """
@@ -244,7 +247,10 @@ class BLECentral:
         self._conn_callback = callback
         if self._addr_type is None or self._addr is None:
             return False
-        self._ble.gap_connect(self._addr_type, self._addr)
+        try:
+            self._ble.gap_connect(self._addr_type, self._addr)
+        except OSError:
+            pass
         return True
 
         
@@ -340,7 +346,6 @@ def demo():
 
             while central.wait_for_connection(False, 15000):
 
-                
                 global Central_ACK_required
             
                 if Central_ACK_required == 1:
@@ -366,9 +371,13 @@ def demo():
                 #     current_sw1 = sw1_value       
 
             central.disconnect()
-            
-            print("Disconnected from Peripheral with MAC addr {}...".format(hexlify(addr)))   
 
+            if central.wait_for_connection(False, 3000):
+                print("Disconnected")
+            else:
+                print("Disconnect failed (timeout)!")
+                central._reset()
+            
         print("end of the polling cycle : sleeping 20s")
         time.sleep(20)
 
