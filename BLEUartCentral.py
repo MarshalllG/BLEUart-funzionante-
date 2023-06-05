@@ -18,9 +18,6 @@ import time
 ADDR_TYPE_PUBLIC = const(0x00)
 ADDR_TYPE_RANDOM = const(0x01)
 
-# Time constants (T_WAIT: ms / others: s)
-_T_WAIT  = const(100)
-
 # known peripherals' MAC addresses 
 peripherals = [ 
     bytes(b'\x02\x05\x82\x06\x35\x9e'),
@@ -54,8 +51,8 @@ _UART_RX_CHAR_UUID = bluetooth.UUID("6E400002-B5A3-F393-E0A9-E50E24DCCA9E")
 _UART_TX_CHAR_UUID = bluetooth.UUID("6E400003-B5A3-F393-E0A9-E50E24DCCA9E")
 
 # global variables
-MAC_address = 0 # Central's MAC addr
-Central_ACK_required = 0 # ack or not
+MAC_address = 0 # Peripheral's MAC addr
+My_MAC = "c190701061"
 
 # max bytes for messages
 _MAX_NB_BYTES = const(128)
@@ -267,26 +264,6 @@ class BLECentral:
             pass
         self._reset()
 
-    def wait_for_connection(self, status, timeout_ms):
-        """
-        Wait until connection reaches 'status' or a timeout occurrs.
-
-        The connection status is polled in _T_WAIT intervals.
-
-        Parameters:
-            status (bool):     expected connection status
-            timeout_ms (int) : timeout in ms
-
-        Returns:
-            bool: True  desired status occurred,
-                  False timeout ocurred.
-        """
-        t0 = time.ticks_ms()
-        
-        while time.ticks_diff(time.ticks_ms(), t0) < timeout_ms:
-            time.sleep_ms(_T_WAIT)
-        return False
-
     # send data to Uart
     # this method allows the Central to send a message to the Peripheral
     def write(self, v, response = False):
@@ -317,8 +294,12 @@ def on_receipt(v):
 
     print("received message from Peripheral with MAC addr " + str(MAC_address) + " : ", payload)
 
-    global Central_ACK_required
-    Central_ACK_required = 1
+    try:
+        v = "ack from Central " + My_MAC
+        central.write(v)
+    except:
+        print("Failed to send response from Central")
+
 
 # instantiating a BLE Central
 ble = bluetooth.BLE()
@@ -344,31 +325,25 @@ def demo():
             # capture receive events
             central.on_notify(on_receipt)
 
-            while central.wait_for_connection(False, 15000):
+            t0 = time.time()
 
-                global Central_ACK_required
-            
-                if Central_ACK_required == 1:
-                    try:
-                        v = "ack from Central " + MAC_address
-                        central.write(v)
-                    except:
-                        print("Failed to send response from Central")
-
+            while(True):
+                if (int(time.time()-t0) >= + 15):
+                    break
                 # when button SW1 is pressed on Central board, force the change of the LED state on the Peripheral board
-                # sw1 = pyb.Pin('SW1', pyb.Pin.IN)
-                # sw1.init(pyb.Pin.IN, pyb.Pin.PULL_UP, af=-1)
-                # current_sw1 = 1
-                # sw1_value = sw1.value()
-                # if sw1_value != current_sw1:
-                #     if sw1_value == 0: # user button SW1 is pressed
-                #         command = "change LED state"
-                #         try:
-                #             central.write(command)
-                #             print("sending command: change LED state")
-                #         except:
-                #             print("Failed to send command")
-                #     current_sw1 = sw1_value       
+                sw1 = pyb.Pin('SW1', pyb.Pin.IN)
+                sw1.init(pyb.Pin.IN, pyb.Pin.PULL_UP, af=-1)
+                current_sw1 = 1
+                sw1_value = sw1.value()
+                if sw1_value != current_sw1:
+                    if sw1_value == 0: # user button SW1 is pressed
+                        command = "change LED state"
+                        try:
+                            central.write(command)
+                            print("sending command: change LED state")
+                        except:
+                            print("Failed to send command")
+                    current_sw1 = sw1_value  
 
             central.disconnect()
 
@@ -379,6 +354,7 @@ def demo():
                 central._reset()
             
         print("end of the polling cycle : sleeping 20s")
+    
         time.sleep(20)
 
 if __name__ == "__main__":
