@@ -14,6 +14,8 @@ import pyb
 import machine
 import time
 
+_CONNECTION_INTERVAL_SEC = 15
+
 # Address types (cf. https://docs.micropython.org/en/latest/library/ubluetooth.html)
 ADDR_TYPE_PUBLIC = const(0x00)
 ADDR_TYPE_RANDOM = const(0x01)
@@ -328,7 +330,7 @@ def demo():
             t0 = time.time()
 
             while(True):
-                if (int(time.time()-t0) >= + 15):
+                if (int(time.time()-t0) >= _CONNECTION_INTERVAL_SEC):
                     break
                 # when button SW1 is pressed on Central board, force the change of the LED state on the Peripheral board
                 sw1 = pyb.Pin('SW1', pyb.Pin.IN)
