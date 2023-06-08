@@ -178,7 +178,7 @@ def demo():
 	def on_rx():
 		message = uart.read().decode().strip()
 		print("data received from Central : ", message)
-		if (message = "change LED state"):
+		if (message == "change LED state"):
 			if(pyb.LED(3).on()):
 				pyb.LED(3).off()
 				print("Central command received: turning LED off")
