@@ -1,0 +1,2 @@
+[en]
+The aim of the project is to configure a network of Internet of Things devices, which can exchange information through Bluetooth for Low Energy (BLE) technology. The application context concerns the management of lightning in the smart city. We will reproduce a model that should simulate in a small scale the smart city, using LEDs as street lamps. However, although we introduce a mechanism to control these lights, we remain focused on the transport layer, i.e. the exchange of packets and how communication is handled.
