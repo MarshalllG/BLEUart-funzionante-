@@ -1,0 +1,902 @@
+Release 12.1 - xst M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Reading design: toplevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "toplevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "toplevel"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : toplevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : auto
+Reduce Control Sets                : auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Library Search Order               : toplevel.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../../sumavg2-main"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\dividerDP.vhdl" into library work
+Parsing package <divider_dp_pkg>.
+Parsing entity <divider_dp>.
+Parsing architecture <s> of entity <divider_dp>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\dividerCU.vhdl" into library work
+Parsing package <divider_ctrl_pkg>.
+Parsing entity <divider_ctrl>.
+Parsing architecture <s> of entity <divider_ctrl>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\divider.vhdl" into library work
+Parsing package <divider_pkg>.
+Parsing entity <divider>.
+Parsing architecture <s> of entity <divider>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\sumavgDP.vhdl" into library work
+Parsing package <sumavg_dp_pkg>.
+Parsing entity <sumavg_dp>.
+Parsing architecture <s> of entity <sumavg_dp>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\sumavgCU.vhdl" into library work
+Parsing package <sumavg_ctrl_pkg>.
+Parsing entity <sumavg_ctrl>.
+Parsing architecture <behav> of entity <sumavg_ctrl>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\memmuxDP.vhdl" into library work
+Parsing package <memmux_dp_pkg>.
+Parsing entity <memmux_dp>.
+Parsing architecture <s> of entity <memmux_dp>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\memmuxCU.vhdl" into library work
+Parsing package <memmux_ctrl_pkg>.
+Parsing entity <memmux_ctrl>.
+Parsing architecture <behav> of entity <memmux_ctrl>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\memaccessDP.vhdl" into library work
+Parsing package <memaccess_dp_pkg>.
+Parsing entity <memaccess_dp>.
+Parsing architecture <s> of entity <memaccess_dp>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\memaccessCU.vhdl" into library work
+Parsing package <memaccess_ctrl_pkg>.
+Parsing entity <memaccess_ctrl>.
+Parsing architecture <behav> of entity <memaccess_ctrl>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\dispatcherDP.vhdl" into library work
+Parsing package <dispatcher_dp_pkg>.
+Parsing entity <dispatcher_dp>.
+Parsing architecture <s> of entity <dispatcher_dp>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\dispatcherCU.vhdl" into library work
+Parsing package <dispatcher_ctrl_pkg>.
+Parsing entity <dispatcher_ctrl>.
+Parsing architecture <behav> of entity <dispatcher_ctrl>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\sumavg.vhdl" into library work
+Parsing package <sumavg_pkg>.
+Parsing entity <sumavg>.
+Parsing architecture <struct> of entity <sumavg>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\memory.vhdl" into library work
+Parsing entity <memory>.
+Parsing architecture <s> of entity <memory>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\memmux.vhdl" into library work
+Parsing package <memmux_pkg>.
+Parsing entity <memmux>.
+Parsing architecture <s> of entity <memmux>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\memaccess.vhdl" into library work
+Parsing package <memaccess_pkg>.
+Parsing entity <memaccess>.
+Parsing architecture <s> of entity <memaccess>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\dispatcher.vhdl" into library work
+Parsing package <dispatcher_pkg>.
+Parsing entity <dispatcher>.
+Parsing architecture <s> of entity <dispatcher>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\system.vhdl" into library work
+Parsing package <system_pkg>.
+Parsing entity <system>.
+Parsing architecture <rtl> of entity <system>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\toplevel.vhdl" into library work
+Parsing entity <toplevel>.
+Parsing architecture <rtl> of entity <toplevel>.
+Parsing VHDL file "C:\Users\giulio\Desktop\sumavg2-main\serial_to_device.vhdl" into library work
+Parsing package <serial_to_device_pkg>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <toplevel> (architecture <rtl>) from library <work>.
+WARNING:HDLCompiler:89 - "C:\Users\giulio\Desktop\sumavg2-main\toplevel.vhdl" Line 19: <serial_to_device> remains a black-box since it has no binding entity.
+
+Elaborating entity <system> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <dispatcher> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <dispatcher_ctrl> (architecture <behav>) with generics from library <work>.
+Case statement is complete. Others clause is never selected and therefore discarded.
+
+Elaborating entity <dispatcher_dp> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <memaccess> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <memaccess_ctrl> (architecture <behav>) from library <work>.
+Case statement is complete. Others clause is never selected and therefore discarded.
+
+Elaborating entity <memaccess_dp> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <sumavg> (architecture <struct>) with generics from library <work>.
+
+Elaborating entity <sumavg_ctrl> (architecture <behav>) with generics from library <work>.
+
+Elaborating entity <sumavg_dp> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <divider> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <divider_ctrl> (architecture <s>) from library <work>.
+
+Elaborating entity <divider_dp> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <memmux> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <memmux_ctrl> (architecture <behav>) from library <work>.
+Case statement is complete. Others clause is never selected and therefore discarded.
+
+Elaborating entity <memmux_dp> (architecture <s>) with generics from library <work>.
+
+Elaborating entity <memory> (architecture <s>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\giulio\Desktop\sumavg2-main\memory.vhdl" Line 45: enable should be on the sensitivity list of the process
+WARNING:Xst:2972 - "c:/users/giulio/desktop/sumavg2-main/memmux.vhdl" line 81. All outputs of instance <CTRL> of block <memmux_ctrl> are unconnected in block <memmux>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <toplevel>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/toplevel.vhdl".
+    Summary:
+	no macro.
+Unit <toplevel> synthesized.
+
+Synthesizing Unit <system>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/system.vhdl".
+        N_BITS = 40
+        W_BITS = 32
+        A_BITS = 12
+        K_BITS = 8
+    Summary:
+	no macro.
+Unit <system> synthesized.
+
+Synthesizing Unit <dispatcher>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/dispatcher.vhdl".
+        N_BITS = 40
+        W_BITS = 32
+        A_BITS = 12
+        K_BITS = 8
+    Summary:
+	no macro.
+Unit <dispatcher> synthesized.
+
+Synthesizing Unit <dispatcher_ctrl>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/dispatchercu.vhdl".
+        K_BITS = 8
+WARNING:Xst:647 - Input <abort> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <dev_abort> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <nextstate[1]_dff_8>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <dispatcher_ctrl> synthesized.
+
+Synthesizing Unit <dispatcher_dp>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/dispatcherdp.vhdl".
+        N_BITS = 40
+        W_BITS = 32
+        A_BITS = 12
+        K_BITS = 8
+    Found 40-bit register for signal <R_dataout>.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <dispatcher_dp> synthesized.
+
+Synthesizing Unit <memaccess>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/memaccess.vhdl".
+        W_BITS = 32
+        A_BITS = 12
+    Summary:
+	no macro.
+Unit <memaccess> synthesized.
+
+Synthesizing Unit <memaccess_ctrl>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/memaccesscu.vhdl".
+    Found 1-bit register for signal <state>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <memaccess_ctrl> synthesized.
+
+Synthesizing Unit <memaccess_dp>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/memaccessdp.vhdl".
+        W_BITS = 32
+        A_BITS = 12
+    Found 12-bit register for signal <R_address>.
+    Found 12-bit adder for signal <adder1> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <memaccess_dp> synthesized.
+
+Synthesizing Unit <sumavg>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/sumavg.vhdl".
+        W_BITS = 32
+        A_BITS = 12
+        K_BITS = 8
+    Summary:
+	no macro.
+Unit <sumavg> synthesized.
+
+Synthesizing Unit <sumavg_ctrl>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/sumavgcu.vhdl".
+        W_BITS = 32
+        A_BITS = 12
+        K_BITS = 8
+WARNING:Xst:647 - Input <abort> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_1> for signal <nextstate[3]_dff_9>.
+    -----------------------------------------------------------------------
+    | States             | 14                                             |
+    | Transitions        | 22                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 12                                             |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s_init                                         |
+    | Power Up State     | s_init                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <sumavg_ctrl> synthesized.
+
+Synthesizing Unit <sumavg_dp>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/sumavgdp.vhdl".
+        W_BITS = 32
+        A_BITS = 12
+        K_BITS = 8
+WARNING:Xst:647 - Input <set_mem_addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3010 - "c:/users/giulio/desktop/sumavg2-main/sumavgdp.vhdl" line 190: Output port <remainder> of the instance <DIV> is unconnected or connected to loadless signal.
+    Found 12-bit register for signal <R_Y>.
+    Found 12-bit register for signal <R_X>.
+    Found 32-bit register for signal <R_D1>.
+    Found 32-bit register for signal <R_D2>.
+    Found 32-bit register for signal <L>.
+    Found 8-bit register for signal <CNT>.
+    Found 32-bit register for signal <R_acc>.
+    Found 32-bit register for signal <result>.
+    Found 12-bit adder for signal <R_X[11]_GND_22_o_add_17_OUT> created at line 1241.
+    Found 12-bit adder for signal <R_Y[11]_GND_22_o_add_19_OUT> created at line 1241.
+    Found 8-bit adder for signal <CNT[7]_GND_22_o_add_23_OUT> created at line 1241.
+    Found 32-bit adder for signal <X_22_o_R_acc[31]_mux_26_OUT> created at line 172.
+    Found 32-bit adder for signal <R_acc[31]_R_D1[31]_add_27_OUT> created at line 171.
+    Found 31-bit subtractor for signal <GND_22_o_GND_22_o_sub_32_OUT<30:0>>.
+    Found 32-bit comparator greater for signal <GND_22_o_R_acc[31]_LessThan_30_o> created at line 177
+    Found 32-bit comparator greater for signal <PWR_22_o_R_acc[31]_LessThan_31_o> created at line 178
+    Found 31-bit comparator equal for signal <last_iteration> created at line 182
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred 192 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <sumavg_dp> synthesized.
+
+Synthesizing Unit <divider>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/divider.vhdl".
+        OPSIZE = 32
+    Summary:
+	no macro.
+Unit <divider> synthesized.
+
+Synthesizing Unit <divider_ctrl>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/dividercu.vhdl".
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s_init                                         |
+    | Power Up State     | s_init                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <divider_ctrl> synthesized.
+
+Synthesizing Unit <divider_dp>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/dividerdp.vhdl".
+        OPSIZE = 32
+    Found 32-bit register for signal <R_B>.
+    Found 32-bit register for signal <R_res>.
+    Found 6-bit register for signal <R_cnt>.
+    Found 64-bit register for signal <R_A>.
+    Found 33-bit subtractor for signal <adder1_out>.
+    Found 6-bit subtractor for signal <adder2_out>.
+    Found 64-bit 3-to-1 multiplexer for signal <in_R_A> created at line 104.
+    Found 32-bit 3-to-1 multiplexer for signal <in_R_res> created at line 112.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 134 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <divider_dp> synthesized.
+
+Synthesizing Unit <memmux>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/memmux.vhdl".
+        W_BITS = 32
+        A_BITS = 12
+    Summary:
+	no macro.
+Unit <memmux> synthesized.
+
+Synthesizing Unit <memmux_ctrl>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/memmuxcu.vhdl".
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dev_mem_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ma_mem_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_ready> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <memmux_ctrl> synthesized.
+
+Synthesizing Unit <memmux_dp>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/memmuxdp.vhdl".
+        N_BITS = 40
+        W_BITS = 32
+        A_BITS = 12
+        K_BITS = 8
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <memmux_dp> synthesized.
+
+Synthesizing Unit <memory>.
+    Related source file is "c:/users/giulio/desktop/sumavg2-main/memory.vhdl".
+    Found 4096x32-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 32-bit register for signal <dataout>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <memory> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x32-bit single-port RAM                           : 1
+# Adders/Subtractors                                   : 8
+ 12-bit adder                                          : 3
+ 31-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 33-bit subtractor                                     : 1
+ 6-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 16
+ 1-bit register                                        : 1
+ 12-bit register                                       : 3
+ 32-bit register                                       : 8
+ 40-bit register                                       : 1
+ 6-bit register                                        : 1
+ 64-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 3
+ 31-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 19
+ 1-bit 2-to-1 multiplexer                              : 4
+ 12-bit 2-to-1 multiplexer                             : 5
+ 2-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 32-bit 3-to-1 multiplexer                             : 1
+ 40-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 1
+ 64-bit 3-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../../sumavg2-main/serial_to_device.ngc>.
+Loading core <serial_to_device> for timing and area information for instance <SER>.
+INFO:Xst:2261 - The FF/Latch <L_8> in Unit <DP> is equivalent to the following 23 FFs/Latches, which will be removed : <L_9> <L_10> <L_11> <L_12> <L_13> <L_14> <L_15> <L_16> <L_17> <L_18> <L_19> <L_20> <L_21> <L_22> <L_23> <L_24> <L_25> <L_26> <L_27> <L_28> <L_29> <L_30> <L_31> 
+WARNING:Xst:1710 - FF/Latch <L_8> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_31> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_30> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_29> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_28> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_27> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_26> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_25> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_24> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_23> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_22> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_21> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_20> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_19> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_18> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_17> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_16> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_15> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_14> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_13> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_12> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_11> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_10> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_9> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_B_8> (without init value) has a constant value of 0 in block <DP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <R_A_63> of sequential type is unconnected in block <DP>.
+WARNING:Xst:2404 -  FFs/Latches <L<31:8>> (without init value) have a constant value of 0 in block <sumavg_dp>.
+
+Synthesizing (advanced) Unit <divider_dp>.
+The following registers are absorbed into counter <R_cnt>: 1 register on signal <R_cnt>.
+Unit <divider_dp> synthesized (advanced).
+
+Synthesizing (advanced) Unit <memaccess_dp>.
+The following registers are absorbed into counter <R_address>: 1 register on signal <R_address>.
+Unit <memaccess_dp> synthesized (advanced).
+
+Synthesizing (advanced) Unit <memory>.
+INFO:Xst:3040 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <dataout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     enA            | connected to signal <enable>        | high     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <datain>        |          |
+    |     doA            | connected to signal <dataout>       |          |
+    |     dorstA         | connected to signal <we>            | high     |
+    | reset value        | 00000000000000000000000000000000               |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <memory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sumavg_dp>.
+The following registers are absorbed into accumulator <R_acc>: 1 register on signal <R_acc>.
+The following registers are absorbed into counter <R_Y>: 1 register on signal <R_Y>.
+The following registers are absorbed into counter <R_X>: 1 register on signal <R_X>.
+The following registers are absorbed into counter <CNT>: 1 register on signal <CNT>.
+Unit <sumavg_dp> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x32-bit single-port block RAM                     : 1
+# Adders/Subtractors                                   : 2
+ 31-bit subtractor                                     : 1
+ 33-bit subtractor                                     : 1
+# Counters                                             : 5
+ 12-bit up counter                                     : 3
+ 6-bit down counter                                    : 1
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 273
+ Flip-Flops                                            : 273
+# Comparators                                          : 3
+ 31-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 4
+ 12-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 32-bit 3-to-1 multiplexer                             : 1
+ 40-bit 2-to-1 multiplexer                             : 1
+ 64-bit 3-to-1 multiplexer                             : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <R_B_8> in Unit <divider_dp> is equivalent to the following 23 FFs/Latches, which will be removed : <R_B_9> <R_B_10> <R_B_11> <R_B_12> <R_B_13> <R_B_14> <R_B_15> <R_B_16> <R_B_17> <R_B_18> <R_B_19> <R_B_20> <R_B_21> <R_B_22> <R_B_23> <R_B_24> <R_B_25> <R_B_26> <R_B_27> <R_B_28> <R_B_29> <R_B_30> <R_B_31> 
+WARNING:Xst:1710 - FF/Latch <R_B_8> (without init value) has a constant value of 0 in block <divider_dp>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SYS/DIS/CTRL/nextstate[1]_dff_8> on signal <nextstate[1]_dff_8[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ init     | 00
+ wait_ma  | 01
+ wait_dev | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SYS/DEV/DP/DIV/CTRL/state> on signal <state[1:2]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ s_init      | 00
+ s_init2     | 01
+ s_stateloop | 10
+-------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SYS/DEV/CTRL/nextstate[3]_dff_9> on signal <nextstate[3]_dff_9[1:14]> with one-hot encoding.
+--------------------------------------
+ State              | Encoding
+--------------------------------------
+ s_init             | 00000000000001
+ s_read_1           | 00000000000010
+ s_fetch_1          | 00000000001000
+ s_read_2           | 00000000010000
+ s_fetch_2          | 00000000100000
+ s_acc_1            | 00000001000000
+ s_check_overflow_1 | 00000010000000
+ s_acc_2            | 00000100000000
+ s_check_overflow_2 | 00010000000000
+ s_overflow         | 00001000000000
+ s_div_start        | 00100000000000
+ s_err_zero         | 00000000000100
+ s_div_wait         | 01000000000000
+ s_div_end          | 10000000000000
+--------------------------------------
+WARNING:Xst:1710 - FF/Latch <R_dataout_32> (without init value) has a constant value of 0 in block <dispatcher_dp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_dataout_33> (without init value) has a constant value of 0 in block <dispatcher_dp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_dataout_34> (without init value) has a constant value of 0 in block <dispatcher_dp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_dataout_35> (without init value) has a constant value of 0 in block <dispatcher_dp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_dataout_36> (without init value) has a constant value of 0 in block <dispatcher_dp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_dataout_37> (without init value) has a constant value of 0 in block <dispatcher_dp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_dataout_38> (without init value) has a constant value of 0 in block <dispatcher_dp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_dataout_39> (without init value) has a constant value of 0 in block <dispatcher_dp>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <toplevel> ...
+
+Optimizing unit <dispatcher_dp> ...
+
+Optimizing unit <dispatcher_ctrl> ...
+
+Optimizing unit <memaccess_ctrl> ...
+
+Optimizing unit <sumavg_dp> ...
+
+Optimizing unit <divider_dp> ...
+
+Optimizing unit <divider_ctrl> ...
+
+Optimizing unit <sumavg_ctrl> ...
+WARNING:Xst:2677 - Node <SYS/DEV/DP/DIV/DP/R_A_63> of sequential type is unconnected in block <toplevel>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block toplevel, actual ratio is 2.
+FlipFlop SYS/DIS/CTRL/nextstate[1]_dff_8_FSM_FFd1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 341
+ Flip-Flops                                            : 341
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : toplevel.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1155
+#      GND                         : 2
+#      INV                         : 31
+#      LUT1                        : 30
+#      LUT2                        : 38
+#      LUT3                        : 204
+#      LUT4                        : 125
+#      LUT5                        : 148
+#      LUT6                        : 173
+#      MUXCY                       : 201
+#      VCC                         : 2
+#      XORCY                       : 201
+# FlipFlops/Latches                : 692
+#      FD                          : 32
+#      FDC                         : 44
+#      FDCE                        : 554
+#      FDE                         : 60
+#      FDP                         : 2
+# RAMS                             : 8
+#      RAMB16BWER                  : 8
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             692  out of  54576     1%  
+ Number of Slice LUTs:                  750  out of  27288     2%  
+    Number used as Logic:               749  out of  27288     2%  
+    Number used as Memory:                1  out of   6408     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    990
+   Number with an unused Flip Flop:     298  out of    990    30%  
+   Number with an unused LUT:           240  out of    990    24%  
+   Number of fully used LUT-FF pairs:   452  out of    990    45%  
+   Number of unique control sets:        32
+
+IO Utilization: 
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    218     1%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of    116     6%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 701   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.615ns (Maximum Frequency: 131.322MHz)
+   Minimum input arrival time before clock: 5.360ns
+   Maximum output required time after clock: 3.856ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 7.615ns (frequency: 131.322MHz)
+  Total number of paths / destination ports: 29128 / 1505
+-------------------------------------------------------------------------
+Delay:               7.615ns (Levels of Logic = 5)
+  Source:            SYS/DIS/CTRL/nextstate[1]_dff_8_FSM_FFd2 (FF)
+  Destination:       SYS/MEM/Mram_RAM2 (RAM)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: SYS/DIS/CTRL/nextstate[1]_dff_8_FSM_FFd2 to SYS/MEM/Mram_RAM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             14   0.525   0.958  SYS/DIS/CTRL/nextstate[1]_dff_8_FSM_FFd2 (SYS/DIS/CTRL/nextstate[1]_dff_8_FSM_FFd2)
+     LUT2:I1->O           44   0.254   1.918  SYS/DIS/CTRL/nextstate[1]_dff_8_done1 (sig_done)
+     begin scope: 'SER'
+     LUT6:I0->O           11   0.254   0.883  U_00537 (start)
+     end scope: 'SER'
+     LUT6:I5->O            1   0.254   0.580  SYS/DIS/CTRL/nextstate[1]_dff_8_FSM_FFd2-In2_1 (SYS/DIS/CTRL/nextstate[1]_dff_8_FSM_FFd2-In2)
+     LUT4:I3->O           40   0.254   1.405  SYS/MMUX/DP/Mmux_mem_we11 (SYS/sig_mem_we)
+     RAMB16BWER:WEA0           0.330          SYS/MEM/Mram_RAM2
+    ----------------------------------------
+    Total                      7.615ns (1.871ns logic, 5.744ns route)
+                                       (24.6% logic, 75.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 665 / 633
+-------------------------------------------------------------------------
+Offset:              5.360ns (Levels of Logic = 3)
+  Source:            rst_n (PAD)
+  Destination:       SER/U_00003 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: rst_n to SER/U_00003
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.228   1.348  rst_n_IBUF (rst_n_IBUF)
+     begin scope: 'SER'
+     INV:I->O            291   0.255   2.070  U_00860 (n_00126)
+     FDC:CLR                   0.459          U_00003
+    ----------------------------------------
+    Total                      5.360ns (1.942ns logic, 3.418ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.856ns (Levels of Logic = 2)
+  Source:            SER/U_00480 (FF)
+  Destination:       TXD (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: SER/U_00480 to TXD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.525   0.616  U_00480 (TXD)
+     end scope: 'SER'
+     OBUF:I->O                 2.715          TXD_OBUF (TXD)
+    ----------------------------------------
+    Total                      3.856ns (3.240ns logic, 0.616ns route)
+                                       (84.0% logic, 16.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.24 secs
+ 
+--> 
+
+Total memory usage is 174056 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   51 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

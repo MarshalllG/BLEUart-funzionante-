@@ -1,0 +1,8 @@
+Release 12.1 Drc M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Sat May 04 13:52:20 2024
+
+drc -z toplevel.ncd toplevel.pcf
+
+DRC detected 0 errors and 0 warnings.

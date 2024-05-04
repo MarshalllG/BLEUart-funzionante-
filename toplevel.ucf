@@ -1,0 +1,17 @@
+
+#OFFSET = OUT 10 ns AFTER "CLK";
+CONFIG PART = xc6slx45-2csg324;
+
+NET "CLK" TNM_NET="CLK";
+TIMESPEC TS_CLK = PERIOD "CLK" 10 ns HIGH 50%;
+
+NET "CLK" LOC = "L15";
+NET "rst_n" LOC = "T15";
+
+NET "RXD" LOC = "A16"; # IO_L66N_SCP0
+NET "TXD" LOC = "B16"; # IO_L66P_SCP1
+#Created by Constraints Editor (xc6slx45-csg324-3) - 2024/05/04
+INST "RXD" TNM = in;
+TIMEGRP "in" OFFSET = IN 8 ns VALID 10 ns BEFORE "CLK" RISING;
+INST "TXD" TNM = out;
+TIMEGRP "out" OFFSET = OUT 10 ns AFTER "CLK";

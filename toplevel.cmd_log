@@ -1,0 +1,135 @@
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -i -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.xst" -ofn "C:/Users/giulio/Desktop/sumavg/sintesi/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../sumavg2-main -nt timestamp -uc toplevel.ucf -p xc6slx45-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -ol high -t 1 -xt 0 -register_duplication off -global_opt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf toplevel.ucf 

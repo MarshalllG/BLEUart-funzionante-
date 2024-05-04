@@ -1,0 +1,42 @@
+
+****** PlanAhead v12.1
+  **** Build 61553 by hdbuild on Fri Apr 23 10:13:54 PDT 2010
+    ** Copyright 1986-1999, 2001-2010 Xilinx, Inc. All Rights Reserved.
+
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-ArchReader 0] Loading parts and site information from C:\Xilinx\12.1\ISE_DS\PlanAhead\parts\arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file 'C:\Xilinx\12.1\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file 'C:\Xilinx\12.1\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+INFO: [HD-Application 1] Opened log file C:/Users/giulio/Desktop/sumavg/sintesi/planAhead_run_1/planAhead.log
+INFO: [HD-Application 2] Opened journal file C:/Users/giulio/Desktop/sumavg/sintesi/planAhead_run_1/planAhead.jou
+INFO: [HD-Licensing 4] Feature available: PartialReconfiguration
+Release 12.1 - ngc2edif M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Release 12.1 - ngc2edif M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Reading design toplevel.ngc ...
+WARNING:NetListWriters:298 - No output is written to toplevel.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file toplevel.edif ...
+ngc2edif: Total memory usage is 56264 kilobytes
+
+Release 12.1 - ngc2edif M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Release 12.1 - ngc2edif M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Reading design serial_to_device.ngc ...
+WARNING:NetListWriters:298 - No output is written to serial_to_device.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file serial_to_device.edif ...
+ngc2edif: Total memory usage is 56776 kilobytes
+
